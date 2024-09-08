@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+--primary-color: #F87C56;
+--secondary-dark: #7F7F8A;
+--dark: #141416;
+--offwhite: #F5F5F5;
+--light-gray: #D9D9D9;
+
+}
+*{
+
+}
+body{
+    font-family: "Poppins", system-ui;
+}
+
+.top-header{
+    background-color: var(--offwhite);
+}
+.top-header li{
+    display: flex;
+    flex: 1 0 0%;
+    font-size: 12px;
+}
+.top-header li span{
+    display: block;
+    max-width: 20;
+    height: 1px;
+    background-color: var(--secondary-dark);
+}
+.navbar-brand img{
+    max-width: 156px;
+}
+.navbar-nav{}
+.navbar-nav li{}
+.navbar-nav li a {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.navbar-nav li a.active,
+.navbar-nav li a:hover{
+    color: var(--primary-color) !important;
+}
+
+/** hero banner section **/
+
+
+.carousel-inner .carousel-item {
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+}
+
+.opacity-30::before {
+    opacity: 30% !important;
+}
+
+.opacity-40::before {
+    opacity: 40% !important;
+}
+
+.overlay::before {
+    position: absolute;
+    content: "";
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: auto;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: left;
+    max-width: 550px;
+}
+
+.carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 250;
+}
+
+.carousel-inner .carousel-item .carousel-caption h2 {
+    font-size: 120px;
+    line-height: 80%;
+}
+
+.carousel-inner .carousel-item .carousel-caption a {
+    font-size: 17px;
+    color: var(--white);
+
+    text-transform: uppercase;
+}
+
+.carousel-inner .carousel-item .carousel-caption a:hover svg path {
+    stroke: var(--dark);
+}
+
+.carousel-inner .carousel-item .carousel-caption a:hover {
+    font-size: 17px;
+    color: var(--dark);
+}
+
+
+.link_section {                /** link section **/
+    padding: 40px 0;
+}
+
+.link_section .title {
+    text-align: center;
+
+}
+
+.title img {
+    height: 29px;
+}
+
+.CollectionSection{
+    padding: 0 0 50px;
+}
+.collection{
+    overflow: hidden;
+}
+.collection img{
+    filter: grayscale(1);
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s linear; 
+}
+.collection:hover img{
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+.collection.featured img{
+    filter: grayscale(0);
+}
+.collection a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    color: #ffff;
+    text-decoration: none;
+}
+.collection.featured a path{
+    stroke: var(--primary-color);
+}
+.collection{
+    height: 100%;
+}
+.collection.featured a{
+    justify-content: center;
+    color: var(--primary-color);
+    background-color: #fff;
+    width: auto;
+    left: 38%;
+    bottom: 35%;
+    transform: translate(-50% 35%);
+    gap: 10px;
+}
+.collection.featured a:hover path{
+    stroke: var(--offwhite);
+}
+.collection.featured a:hover{
+    background-color: var(--primary-color);
+    color: var(--offwhite);
+}
+.collection.featured h2{
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    bottom: 55%;
+    transform: translateY(50%);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.collectionTab{
+    padding: 50px 0 200px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--dark);
+    border-bottom: 3px solid var(--dark);
+    border-radius: 0;
+}
+.nav-pills .nav-link{
+   
+    color: #767677
+}
+.viewall{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    color: var(--dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.viewall path{
+    stroke: var(--dark);
+}
+.collectionTab .carousel-control-next-icon {
+    background-image: url("../images/icons/right\ arrow.svg") !important;
+}
+.collectionTab .carousel-control-prev-icon,
+.collectionTab .carousel-control-next-icon {
+    width: 15px;
+    height: 25px;
+}
+.collectionTab .carousel-control-prev-icon {
+    background-image: url("../images/icons/left\ arrow.svg") !important;
+}
+.collectionTab .wishlist {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+}
+.discount{
+    background-color: white;
+    position: absolute;
+    padding: 3px 10px;
+    color: var(--dark);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.discount img{
+    width: 12px;
+}
+.variant_color{
+    gap: 8px;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+    margin-top: 25px;
+
+}
+
+.variant_color button{
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #ffff !important;
+    opacity: 1 !important;
+}
+.variant_color button[variant-color="dark"]{
+    background-color: var(--dark);
+}
+.variant_color button[variant-color="dark"]:hover,
+.variant_color button[variant-color="dark"]:focus,
+.variant_color button[variant-color="dark"].active{
+    box-shadow: 0px 0px 0px 2px var(--dark);
+}
+.variant_color button[variant-color="red"]{
+    background-color: var(--primary-color);
+}
+.variant_color button[variant-color="red"]:hover,
+.variant_color button[variant-color="red"]:focus,
+.variant_color button[variant-color="red"].active{
+    box-shadow: 0px 0px 0px 2px var(--primary-color);
+}
+.product_info{}
+.product_info h5{
+    font-size: 15px;
+    color: var(--dark);
+}
+.product_info .totleprice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product_info .totleprice h3 {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--dark);
+    margin: 0;
+}
+.product_info .totleprice .price{
+    font-size: 16px;
+    color: var(--dark);
+}
+.variant-size{
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.variant-size button{
+    border-top: 1px solid var(--secondary-dark);
+    border-bottom: 1px solid var(--secondary-dark);
+    border-left: 1px solid var(--secondary-dark);
+    border-right: 0px solid var(--secondary-dark);
+    background-color: #fff;
+    flex: 1 1 0%;
+    transition-duration: 0.3s;
+    font-weight: 300;
+}
+.variant-size button:last-child{
+    border-right: 1px solid var(--secondary-dark);
+}
+.variant-size button:hover,
+.variant-size button:focus{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
